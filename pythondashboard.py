@@ -169,7 +169,7 @@ else:
             
             try:
                 summary_report = df.describe(include='all').transpose()
-                csv__data = convert_df_to_csv(summary_report)
+                csv_data = convert_df_to_csv(summary_report)
                 
                 st.download_button(
                     label="Download Summary Report as CSV",
@@ -183,4 +183,5 @@ else:
                 
             except Exception as e:
                 st.error(f"Error generating report: {e}")
+
 
